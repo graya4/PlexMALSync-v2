@@ -1,8 +1,10 @@
 import json
 import requests
 import secrets
+import malupdate as mal
 #325ed4fa31ab412ee1071f17db92098b
 
+mal.User.login("bootleg_dankie", "Oldrouter1")
 CLIENT_ID = '325ed4fa31ab412ee1071f17db92098b'
 #CLIENT_SECRET = 'YOUR CLIENT SECRET'
 
@@ -71,4 +73,5 @@ if __name__ == '__main__':
     authorisation_code = input('Copy-paste the Authorisation Code: ').strip()
     token = generate_new_token(authorisation_code, code_verifier)
 
+    
     print_user_info(token['access_token'])
